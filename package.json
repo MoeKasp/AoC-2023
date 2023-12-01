@@ -12,7 +12,8 @@
     "ts-node": "^10.9.1"
   },
   "scripts": {
-    "start1": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/1/index.ts",
+    "start1.1": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/1/part1/index.ts",
+    "start1.2": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/1/part2/index.ts",
     "start2": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/2/index.ts",
     "start3": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/3/index.ts",
     "start4": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/4/index.ts",
