@@ -1,0 +1,40 @@
+{
+  "name": "AoC-2023",
+  "version": "1.0.0",
+  "main": "dist/1/index.js",
+  "license": "MIT",
+  "dependencies": {
+    "typescript": "^5.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.1",
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.1"
+  },
+  "scripts": {
+    "start1": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/1/index.ts",
+    "start2": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/2/index.ts",
+    "start3": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/3/index.ts",
+    "start4": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/4/index.ts",
+    "start5": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/5/index.ts",
+    "start6": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/6/index.ts",
+    "start7": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/7/index.ts",
+    "start8": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/8/index.ts",
+    "start9": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/9/index.ts",
+    "start10": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/10/index.ts",
+    "start11": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/11/index.ts",
+    "start12": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/12/index.ts",
+    "start13": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/13/index.ts",
+    "start14": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/14/index.ts",
+    "start15": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/15/index.ts",
+    "start16": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/16/index.ts",
+    "start17": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/17/index.ts",
+    "start18": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/18/index.ts",
+    "start19": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/19/index.ts",
+    "start20": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/20/index.ts",
+    "start21": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/21/index.ts",
+    "start22": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/22/index.ts",
+    "start23": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/23/index.ts",
+    "start24": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/24/index.ts"
+  }
+}
