@@ -22,6 +22,7 @@
     "start4.2": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/4/part2/index.ts",
     "start5.1": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/5/part1/index.ts",
     "start5.2": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/5/part2/index.ts",
+    "start5.brute": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/5/part2/brute.ts",
     "start6": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/6/index.ts",
     "start7": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/7/index.ts",
     "start8": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/8/index.ts",
