@@ -35,22 +35,28 @@ const cardRanks = ['J', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'Q', 'K', '
 const isFiveOfAKind = (hand: Hand): CardResult => {
     const cards = hand.cards;
 
-    const firstCard = cards[0];
+    let result = false;
+    let resCard = '';
+    for (let i = 0; i < cards.length; i++) {
+        let count = 0;
 
-    for (let i = 1; i < cards.length; i++) {
-        const card = cards[i];
+        for (let j = 0; j < cards.length; j++) {
+            const card = cards[j];
 
-        if (!(card === firstCard || card === 'J')) {
-            return {
-                card: '',
-                result: false,
-            };
+            if (card === cards[i] || card === 'J') {
+                count++;
+            }
+
+            if (count === 5) {
+                resCard = cards[i];
+                result = true;
+                break;
+            }
         }
     }
-
     return {
-        card: firstCard,
-        result: true,
+        card: resCard,
+        result,
     };
 };
 
@@ -87,8 +93,11 @@ const isThreeOfAKind = (hand: Hand, ignoreCard?: string): CardResult => {
 
     let result = false;
     let resCard = '';
-    for (let i = 1; i < cards.length; i++) {
+    for (let i = 0; i < cards.length; i++) {
         let count = 0;
+        if (result) {
+            break;
+        }
         if (cards[i] === ignoreCard) {
             continue;
         }
@@ -118,9 +127,10 @@ const isThreeOfAKindTakeAway = (hand: Hand, res: CardResult, ignoreCard?: string
     const filteredCards = cards.filter((card) => card !== res.card);
     if (filteredCards.length === 4) {
         filteredCards.splice(filteredCards.indexOf('J'), 1);
+        filteredCards.splice(filteredCards.indexOf('J'), 1);
+
     }
     if (filteredCards.length === 3) {
-        filteredCards.splice(filteredCards.indexOf('J'), 1);
         filteredCards.splice(filteredCards.indexOf('J'), 1);
     }
     return filteredCards;
@@ -312,6 +322,16 @@ for (let i = 0; i < sortedHands.length; i++) {
 
     sum += hand.bet * (i + 1);
 }
+
+// write to out file
+const out = fs.createWriteStream('./src/7/part2/output');
+for (let i = 0; i < sortedHands.length; i++) {
+    const hand = sortedHands[i];
+
+    out.write(hand.cards.join('') +  '\n');
+}
+out.end();
+
 
 console.log(sortedHands.length);
 
